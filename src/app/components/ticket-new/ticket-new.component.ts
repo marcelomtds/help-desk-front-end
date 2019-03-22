@@ -53,7 +53,7 @@ register() {
     let ticketRet: Ticket = responseApi.data;
     this.form.resetForm();
     this.showMessage({
-      type: 'sucess',
+      type: 'success',
       text: `Registered ${ticketRet.title} successfull`
     });
   }, err => {

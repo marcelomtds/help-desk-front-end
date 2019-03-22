@@ -54,7 +54,7 @@ export class UserNewComponent implements OnInit {
       let userRet: User = responseApi.data;
       this.form.resetForm();
       this.showMessage({
-        type: 'sucess',
+        type: 'success',
         text: `Registered ${userRet.email} successfull`
       });
     }, err => {

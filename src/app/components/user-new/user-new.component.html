@@ -3,7 +3,7 @@
     <div class="box-header with-border">
       <h3 class="box-title">New User</h3>
     </div>
-    <form class="form-horizontal" #ngForm="ngForm" (ngSubmit)="register()">
+    <form class="form-horizontal" #form="ngForm" (ngSubmit)="register()">
       <div [ngClass]="classCss" role="alert" *ngIf="message">
         <strong>{{ message.text }}</strong>
       </div>
