@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  user = new User('', '', '', '');
+  user = new User(null, '', '', '');
   shared: SharedService;
   message: string;
 
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
 
   cancelLogin() {
     this.message = '';
-    this.user = new User('', '', '', '');
+    this.user = new User(null, '', '', '');
     window.location.href = '/login';
     window.location.reload();
   }

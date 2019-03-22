@@ -21,4 +21,10 @@ export class AppComponent {
       this.showTemplate = show
     );
   }
+
+  showContentWrapper() {
+    return {
+      'content-wrapper': this.shared.isLoggedIn()
+    }
+  }
 }
