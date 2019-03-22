@@ -1,0 +1,8 @@
+<app-header [hidden]="!showTemplate"></app-header>
+<app-menu [hidden]="!showTemplate"></app-menu>
+<div class="content-wrapper">
+  <section class="content-header">
+    <router-outlet></router-outlet>
+  </section>
+</div>
+<app-footer [hidden]="!showTemplate"></app-footer>
