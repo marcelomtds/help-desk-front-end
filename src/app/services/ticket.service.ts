@@ -29,7 +29,7 @@ export class TicketService {
   }
 
   delete(id: string) {
-    return this.http.delete(`${HELP_DESK_API}/api/ticketx/${id}`)
+    return this.http.delete(`${HELP_DESK_API}/api/ticket/${id}`)
   }
 
   findByParams(page: number, count: number, assignedToMe: boolean, ticket: Ticket) {
