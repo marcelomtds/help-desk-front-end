@@ -19,8 +19,9 @@ export const ROUTES: Routes = [
     { path: 'ticket-new', component: TicketNewComponent, canActivate: [AuthGuard] },
     { path: 'ticket-new/:id', component: TicketNewComponent, canActivate: [AuthGuard] },
     { path: 'ticket-list', component: TicketListComponent, canActivate: [AuthGuard] },
-    { path: 'ticket-detail/:id', component: TicketDetailComponent, canActivate: [AuthGuard] }
-    { path: 'summary', component: SummaryComponent, canActivate: [AuthGuard] }
+    { path: 'ticket-detail/:id', component: TicketDetailComponent, canActivate: [AuthGuard] },
+    { path: 'summary', component: SummaryComponent, canActivate: [AuthGuard] },
+    { path: '**', component: LoginComponent, canActivate: [AuthGuard] },
 ]
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(ROUTES);

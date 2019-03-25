@@ -34,7 +34,7 @@ export class TicketDetailComponent implements OnInit {
   findById(id: string) {
     this.ticketService.findById(id).subscribe((responseApi: ResponseApi) => {
       this.ticket = responseApi.data;
-      this.ticket.date = new Date(this.ticket.date).toString();
+      this.ticket.date = new Date(this.ticket.date).toISOString();
     }, err => {
       this.showMessage({
         type: 'error',
@@ -44,9 +44,9 @@ export class TicketDetailComponent implements OnInit {
   }
 
   changeStatus(status: string): void {
-    this.ticketService.changeStatus(status, this.ticket).subscribe((responseApi: ResponseApi) => {
+    this.ticketService.changeStatus(this.ticket, status).subscribe((responseApi: ResponseApi) => {
       this.ticket = responseApi.data;
-      this.ticket.date = new Date(this.ticket.date).toString();
+      this.ticket.date = new Date(this.ticket.date).toISOString();
       this.showMessage({
         type: 'success',
         text: 'Successfully changed status'
