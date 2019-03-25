@@ -44,7 +44,7 @@ export class TicketService {
     return this.http.put(`${HELP_DESK_API}/api/ticket/${ticket.id}/${status}`, ticket);
   }
 
-  summary(status: string, ticket: Ticket) {
+  summary() {
     return this.http.get(`${HELP_DESK_API}/api/ticket/summary`);
   }
 
